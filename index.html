@@ -22,50 +22,96 @@
 
   </header>
   <main>
-    <div class="text">
-      <h2>D<span>o</span>pamine Det<span>o</span>x</h1>
-        <p>The challenge just start right now</p>
-    </div>
-    <div class="dopamine-detox">
-      <div class="box">
-        <p class="num" id="day-box">00</p>
-        <div>
-          <i class="fa-solid fa-calendar-days"></i>
-          <p>days</p>
+
+    <div class="container">
+      <div class="text">
+        <h2>D<span>o</span>pamine Det<span>o</span>x</h1>
+          <p>The challenge just start right, A dopamine detox entails fasting from dopamine producing activities, or
+            “pleasures,” for a certain amount of time with the hope of decreasing reward sensitivity. However, there is
+            no scientific evidence to support this method <a href="https://www.medicalnewstoday.com/articles/dopamine-detox#:~:text=A%20dopamine%20detox%20entails%20fasting,evidence%20to%20support%20this%20method." target="_blank">read more.</a></p>
+      </div>
+      <div class="start-date" id="data-screen">
+        <span id="day-screen"></span>
+        <span id="month-screen"></span>
+        <span id="year-screen"></span>
+      </div>
+      <div class="dopamine-detox">
+        <div class="box">
+          <p class="num" id="day-box">00</p>
+          <div>
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>days</p>
+          </div>
         </div>
+
+        <div class="box">
+          <p class="num" id="hr-box">00</p>
+          <div>
+            <i class="fa-solid fa-hourglass-start"></i>
+            <p>hours</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <p class="num" id="mi-box">00</p>
+          <div>
+            <i class="fa-solid fa-clock"></i>
+            <p>minutes</p>
+          </div>
+        </div>
+
+        <div class="box">
+          <p class="num" id="se-box">00</p>
+          <div>
+            <i class="fa-solid fa-stopwatch"></i>
+            <p>seconds</p>
+          </div>
+        </div>
+
       </div>
 
-      <div class="box">
-        <p class="num" id="hr-box">00</p>
-        <div>
-          <i class="fa-solid fa-hourglass-start"></i>
-          <p>hours</p>
+
+      <div class="check-list">
+        <div class="to-do">
+          <input type="checkbox" id="hours12" disabled>
+          <label for="12hours">first 12 hours</label>
         </div>
-      </div>
-
-      <div class="box">
-        <p class="num" id="mi-box">00</p>
-        <div>
-          <i class="fa-solid fa-clock"></i>
-          <p>minutes</p>
+        <div class="to-do">
+          <input type="checkbox" id="hours24" disabled>
+          <label for="24hours">first 24 hours</label>
         </div>
-      </div>
-
-      <div class="box">
-        <p class="num" id="se-box">00</p>
-        <div>
-          <i class="fa-solid fa-stopwatch"></i>
-          <p>seconds</p>
+        <div class="to-do">
+          <input type="checkbox" id="days2" disabled>
+          <label for="2days">02 days later</label>
         </div>
-      </div>
-
-    </div>
-
-
-    <div class="check-list">
-      <div class="to-do">
-        <input type="checkbox" id="24hours" disabled checked>
-        <label for="24hours">First 24 Hours</label>
+        <div class="to-do">
+          <input type="checkbox" id="week1" disabled>
+          <label for="1week">01 week later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="week2" disabled>
+          <label for="2week">02 week later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="days15" disabled>
+          <label for="15days">15 days later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="days20" disabled>
+          <label for="20days">20 days later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="month1" disabled>
+          <label for="1month">01 month later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="month2" disabled>
+          <label for="2month">02 month later</label>
+        </div>
+        <div class="to-do">
+          <input type="checkbox" id="month3" disabled>
+          <label for="3month">03 month later</label>
+        </div>
       </div>
     </div>
   </main>

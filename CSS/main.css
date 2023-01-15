@@ -10,12 +10,16 @@
 }
 
 body {
+}
 
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .text {
   text-align: center;
-  margin: 3rem 0; 
+  margin: 3rem 0;
 }
 .text h2 {
   font-size: clamp(1.5rem, 5vw, 3rem);
@@ -50,8 +54,35 @@ body {
   border: 2px solid var(--red-color, #9f0d10);
 }
 .text p {
-  margin-top: 3rem;
   font-size: 1.15rem;
+  width: 60%;
+  margin: 3rem auto;
+}
+.text p a {
+  color: black;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .text p {
+    width: 100%;
+  }
+}
+
+.start-date {
+  margin: 0 auto;
+  width: fit-content;
+  display: flex;
+  gap: 0.25rem;
+}
+.start-date > span {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  border-bottom: 2px solid var(--red-color, #9f0d10);
+
+  box-shadow: 0 2px 6px 1px rgb(0, 0, 0, 10%);
 }
 
 .dopamine-detox {
@@ -59,15 +90,15 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1rem;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 0;
 }
 .dopamine-detox .box {
   padding: 2rem 1rem;
   box-shadow: 0 0 10px 1px rgb(0, 0, 0, 15%);
   color: var(--red-color);
-  border-radius: .25rem;
+  border-radius: 0.25rem;
   border-left: 4px solid var(--red-color, #9f0d10);
-  transition: .25s;
+  transition: 0.25s;
 }
 
 .dopamine-detox .box:hover {
@@ -87,7 +118,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 .dopamine-detox .box > div p:last-child {
   text-transform: capitalize;
@@ -96,12 +127,73 @@ body {
 }
 .dopamine-detox .box i {
   font-size: 1.25rem;
-  transition: .5s transform;
+  transition: 0.5s transform;
 }
 .dopamine-detox .box:hover > div i {
   transform: rotate(1turn);
 }
 
+/* Section Check */
+.check-list {
+  padding: 1rem 0;
+}
+.check-list .to-do {
+  padding: 2rem;
+  border-left: 2px solid var(--red-color, #9f0d10);
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+}
+
+.check-list .to-do::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--red-color, #9f0d10);
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -14px;
+}
+.to-do:has(.checked)::before {
+  background-color: var(--red-color, #9f0d10);
+}
+
+/* Customize The Checkbox */
+.check-list .to-do input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 25px;
+  width: 25px;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 6px 1px rgb(0, 0, 0, 10%);
+  position: relative;
+}
+.check-list .to-do input[type="checkbox"]:checked {
+  background-color: var(--red-color, #9f0d10);
+}
+.check-list .to-do input[type="checkbox"]::after {
+  display: none;
+  content: "\f00c";
+  font-family: var(--fa-style-family-classic);
+  font-weight: 800;
+  color: var(--white-color, #9f0d10);
+  font-size: 1.25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.check-list .to-do input[type="checkbox"]:checked:after {
+  display: block;
+}
+.check-list .to-do label {
+  font-weight: bold;
+  text-transform: capitalize;
+}
 
 /* @keyframes rotateO {
   to {
