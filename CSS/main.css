@@ -1,0 +1,110 @@
+* {
+  font-family: "Mukta", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  --gray-color: #241716;
+  --red-color: #9f0d10;
+  --white-color: #dbd1d4;
+  --blue-color: #344896;
+  --golden-color: #cca64b;
+}
+
+body {
+
+}
+
+.text {
+  text-align: center;
+  margin: 3rem 0; 
+}
+.text h2 {
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: normal;
+  position: relative;
+  width: fit-content;
+  margin: 1rem auto;
+}
+/* .text h2 span {
+  animation: rotateO 1s linear infinite alternate;
+} */
+.text h2::before,
+.text h2:after {
+  content: "";
+  background-color: var(--red-color, #9f0d10);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.text h2::before {
+  width: 90%;
+  height: 2px;
+  bottom: 0;
+}
+.text h2:after {
+  height: 20px;
+  width: 20px;
+  bottom: -8px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: white;
+  border: 2px solid var(--red-color, #9f0d10);
+}
+.text p {
+  margin-top: 3rem;
+  font-size: 1.15rem;
+}
+
+.dopamine-detox {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+.dopamine-detox .box {
+  padding: 2rem 1rem;
+  box-shadow: 0 0 10px 1px rgb(0, 0, 0, 15%);
+  color: var(--red-color);
+  border-radius: .25rem;
+  border-left: 4px solid var(--red-color, #9f0d10);
+  transition: .25s;
+}
+
+.dopamine-detox .box:hover {
+  transform: scale(1.05);
+  background-color: var(--red-color, #9f0d10);
+  color: white;
+}
+.dopamine-detox .box p.num {
+  font-size: 2.5rem;
+  width: 100%;
+  color: var(--gray-color);
+}
+.dopamine-detox .box:hover p.num {
+  color: white;
+}
+.dopamine-detox .box > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+.dopamine-detox .box > div p:last-child {
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.dopamine-detox .box i {
+  font-size: 1.25rem;
+  transition: .5s transform;
+}
+.dopamine-detox .box:hover > div i {
+  transform: rotate(1turn);
+}
+
+
+/* @keyframes rotateO {
+  to {
+    color: var(--red-color, #9f0d10);
+  }
+} */
