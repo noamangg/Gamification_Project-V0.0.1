@@ -1,6 +1,6 @@
 // Some Functions
 function checkItems() {
-  if (hoursEnd >= 12) {
+  if (hoursEnd >= 12 || daysEnd >= 1) {
     timeChecked[0].checked = true;
     if (daysEnd >= 1) timeChecked[1].checked = true;
     if (daysEnd >= 2) timeChecked[2].checked = true;
@@ -15,7 +15,7 @@ function checkItems() {
 }
 function fillBG() {
   for (let i = 0; i < timeChecked.length; i++)
-    if (timeChecked[0].checked) timeChecked[0].className = "checked";
+    if (timeChecked[i].checked) timeChecked[i].className = "checked";
 }
 function countUp() {
   let todayDate = new Date();
@@ -35,7 +35,6 @@ function countUp() {
   minutesBox.textContent = addZeroes(minutesEnd);
   secondsBox.textContent = addZeroes(secondsEnd);
 }
-
 function monthValue(month) {
   let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
   for(let i = 0; i < months.length; i++)
@@ -54,10 +53,13 @@ let hoursBox = document.getElementById("hr-box");
 let minutesBox = document.getElementById("mi-box");
 let secondsBox = document.getElementById("se-box");
 
+
 let startDate = new Date(2023, 0, 15, 5, 0);
 let startTime = startDate.getTime();
 let daysEnd, hoursEnd, minutesEnd, secondsEnd;
+
 let i = setInterval(countUp, Number.MAX_VALUE);
+
 countUp();
 
 document.getElementById('year-screen').innerHTML = startDate.getFullYear();

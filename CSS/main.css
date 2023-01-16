@@ -145,7 +145,10 @@ body {
   align-items: center;
   position: relative;
 }
-
+.progress {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 .check-list .to-do::before {
   content: "";
   width: 25px;
