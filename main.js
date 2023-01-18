@@ -83,3 +83,12 @@ let timeChecked = [
 checkItems();
 fillBG();
 
+
+
+function fillChecked() {
+  let j = document.getElementById('progress-bar');
+  for(let i = 0; i < 25; i++)
+  j.document.write("Hellowdsaf");
+}
+fillChecked();
+
