@@ -35,6 +35,8 @@ function countUp() {
   minutesBox.textContent = addZeroes(minutesEnd);
   secondsBox.textContent = addZeroes(secondsEnd);
 }
+
+// return first three letter form any month
 function monthValue(month) {
   let months = [
     "January",
@@ -51,10 +53,11 @@ function monthValue(month) {
     "December",
   ];
   for (let i = 0; i < months.length; i++) {
-    if (month === i) return months[i][0] + months[i][1] + months[i][2];
+    if (month === i) return months[i].substring(0,3);
   }
-  return months[0][0] + months[0][1] + months[0][2];
+  return months[0].substring(0, 3);
 }
+
 let addZeroes = (num) => (num < 10 ? `0${num}` : num);
 
 // Counter
@@ -96,14 +99,6 @@ let timeChecked = [
 checkItems();
 fillBG();
 
-// function fillChecked() {
-//   let j = document.getElementById('progress-bar');
-//   for(let i = 0; i < 25; i++)
-//   j.document.write("Hellowdsaf");
-// }
-// fillChecked();
-
-// Add Some Days
 
 let days = [];
 days.push(`I deleted the YouTube app and the Chrome browser on my phone, I was so tired and I
@@ -123,6 +118,8 @@ days.push(`No more dopamine today I was so enjoy doing sport I had a great sport
 section, I didn't get enough sleep but it's ok I did very well in my today's exam, but I spent mush time
 jumping from work group to another in the chat app so it's problem that I should solve.`);
 
+days.push(`I filed in this challenge in day 10 but I had a great chance to win in the next time, so this challenge will end, 
+now I replace my smart phone with once that has no internet or any social media site especially YouTube app which is the main problem in my life.  `)
 
 let daysSave = ``;
 for (let i = 0; i < days.length; i++) {

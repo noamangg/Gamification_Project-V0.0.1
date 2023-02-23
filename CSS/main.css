@@ -9,9 +9,48 @@
   --golden-color: #cca64b;
 }
 
+@media (min-width: 767px) {
+  .container {
+    max-width: 1500px;
+  }
+}
 ::selection {
   background-color: var(--red-color, #9f0d10);
   color: white;
+}
+
+header {
+  background-color: var(--red-color, #9f0d10);
+  color: white;
+  
+}
+header .container {
+  padding: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: .5rem;
+  align-items: center;
+}
+header .container p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  grid-area: .25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 body {
@@ -88,7 +127,6 @@ body {
   border-radius: 0.25rem;
   font-weight: bold;
   border-bottom: 2px solid var(--red-color, #9f0d10);
-
   box-shadow: 0 2px 6px 1px rgb(0, 0, 0, 10%);
 }
 
@@ -100,6 +138,12 @@ body {
   gap: 1rem;
   text-align: center;
   padding: 2rem 0;
+}
+@media (max-width: 767px) {
+  .dopamine-detox {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+
+  }
 }
 .dopamine-detox .box {
   padding: 2rem 1rem;
