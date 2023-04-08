@@ -66,7 +66,7 @@ let hoursBox = document.getElementById("hr-box");
 let minutesBox = document.getElementById("mi-box");
 let secondsBox = document.getElementById("se-box");
 
-let startDate = new Date(2023, 0, 15, 5, 0);
+let startDate = new Date(2023, 3, 8, 22, 0);
 let startTime = startDate.getTime();
 let daysEnd, hoursEnd, minutesEnd, secondsEnd;
 
